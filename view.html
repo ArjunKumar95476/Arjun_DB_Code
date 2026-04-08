@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <h2>👁️ View Code</h2>
+    <a href="index.html"><button>⬅ Back</button></a>
+</div>
+
+<div class="container">
+
+    <h2 id="vTitle"></h2>
+    <p id="vCategory"></p>
+
+    <pre id="vCode"></pre>
+
+    <p id="vDesc"></p>
+
+    <button onclick="copyViewCode()">📋 Copy</button>
+
+</div>
+
+<script>
+let data = JSON.parse(localStorage.getItem("viewCode"));
+
+if (data) {
+    document.getElementById("vTitle").innerText = data.title;
+    document.getElementById("vCategory").innerText = "📂 " + data.category;
+    document.getElementById("vCode").innerText = data.code;
+    document.getElementById("vDesc").innerText = data.desc;
+}
+
+function copyViewCode() {
+    navigator.clipboard.writeText(data.code);
+    alert("Copied!");
+}
+</script>
+
+</body>
+</html>

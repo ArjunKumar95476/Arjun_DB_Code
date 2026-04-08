@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, #141e30, #243b55);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Inputs */
+input, textarea, select {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+.add-btn { background: green; color: white; }
+.edit-btn { background: orange; color: white; }
+.delete-btn { background: red; color: white; }
+
+button:not(.add-btn):not(.edit-btn):not(.delete-btn) {
+    background: #2196f3;
+    color: white;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Code */
+pre {
+    background: #0f172a;
+    color: #00ffcc;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+/* Dark Mode */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark .card {
+    background: #1e1e1e;
+}
+
+.dark input, .dark textarea, .dark select {
+    background: #2c2c2c;
+    color: white;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
